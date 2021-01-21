@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Order</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/business-casual.min.css" rel="stylesheet">
+
+</head>
+
+<body onload="setDate()">
+
+<h1 class="site-heading text-center text-white d-none d-lg-block">
+    <span class="site-heading-lower">Good Eats</span>
+</h1>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">Start Bootstrap</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item px-lg-4">
+                    <a class="nav-link text-uppercase text-expanded" href="index.html">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item px-lg-4">
+                    <a class="nav-link text-uppercase text-expanded" href="about.html">About</a>
+                </li>
+                <li class="nav-item px-lg-4">
+                    <a class="nav-link text-uppercase text-expanded" href="products.html">Products</a>
+                </li>
+                <li class="nav-item px-lg-4">
+                    <a class="nav-link text-uppercase text-expanded" href="store.html">Store</a>
+                </li>
+                <li class="nav-item px-lg-4">
+                    <a class="nav-link text-uppercase text-expanded" href="order.html">Order</a>
+                </li>
+                <li class="nav-item active px-lg-4">
+                    <a class="nav-link text-uppercase text-expanded" href="signin.html">Sign in</a>
+                </li>
+                <li class="nav-item px-lg-4">
+                    <a class="nav-link text-uppercase text-expanded" onclick="signout();">Sign-Out</a>
+                </li>
+                <li class="nav-item px-lg-4">
+                    <a class="nav-link text-uppercase text-expanded" href="ViewOrders.html">Owner</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section class="page-section cta">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-9 mx-auto">
+                <div class="cta-inner text-center rounded">
+                    <h2 class="section-heading mb-5">
+                        <span class="section-heading-upper">Come On In</span>
+                        <span class="section-heading-lower">Make me Order</span>
+                    </h2>
+
+
+                    <h3>Sandwiches</h3>
+                    <label id="turkeyClubLabel">Turkey Club ................................................. $8.00</label>
+                    <input type="number" id="turkeyClub" name="quantity" min="1" max="5" value="0">
+                    <br>
+
+                    <label id="tunaLabel">Tuna Fish Sandwich ................................... $8.00</label>
+                    <input type="number" id="tuna" name="quantity" min="1" max="5" value="0">
+                    <br>
+
+                    <label id="cheeseLabel"> Grilled Cheese ............................................. $9.00</label>
+                    <input type="number" id="grilledCheese" name="quantity" min="1" max="5" value="0">
+                    <br>
+
+                    <label id="bltLabel">BLT Sandwich ............................................. $10.00</label>
+                    <input type="number" id="blt" name="quantity" min="1" max="5" value="0">
+                    <br>
+
+                    <label id="eggSaladLabel">Egg Salad Sandwich .................................... $8.00</label>
+                    <input type="number" id="eggSalad" name="quantity" min="1" max="5" value="0">
+                    <br>
+
+                    <label id="grilledChickenLabel">Grilled Chicken Sandwich ......................... $9.00</label>
+                    <input type="number" id="grilledChicken" name="quantity" min="1" max="5" value="0">
+                    <br>
+
+                    <label id="friedChickenLabel">Fried Chicken Sandwich ............................ $9.00</label>
+                    <input type="number" id="friedChicken" name="quantity" min="1" max="5" value="0">
+                    <br>
+                    <br>
+
+                    <h3>Burgers</h3>
+
+                    <label id="cheeseBurgerLabel">Cheese Burger .............................................. $8.00</label>
+                    <input type="number" id="cheeseBurger" name="quantity" min="1" max="5" value="0">
+                    <br>
+
+                    <label id="baconCheeseBurgerLabel">Bacon Cheese Burger ................................ $10.00</label>
+                    <input type="number" id="baconCheeseBurger" name="quantity" min="1" max="5" value="0">
+                    <br>
+
+                    <label id="steakBurgerLabel">Steak Burger ................................................. $12.00</label>
+                    <input type="number" id="steakBurger" name="quantity" min="1" max="5" value="0">
+                    <br>
+
+                    <label id="veggieBurgerLabel">Veggie Burger ............................................... $10.00</label>
+                    <input type="number" id="veggieBurger" name="quantity" min="1" max="5" value="0">
+                    <br>
+                    <br>
+
+                    <h3>Soups</h3>
+
+                    <label id="clamChowderLabel"> Clam Chowder ................................................ $6.00</label>
+                    <input type="number" id="clamChowder" name="quantity" min="1" max="5" value="0">
+                    <br>
+
+                    <label id="potatoSoupLabel">Potato Soup ..................................................... $5.00</label>
+                    <input type="number" id="potatoSoup" name="quantity" min="1" max="5" value="0">
+                    <br>
+
+                    <label id="vegetableSoupLabel">Vegetable Soup ............................................... $4.00</label>
+                    <input type="number" id="vegetableSoup" name="quantity" min="1" max="5" value="0">
+                    <br>
+                    <br>
+
+                    <h3>Salads</h3>
+
+                    <label id="cobbSaladLabel">Cobb Salad ........................................................ $7.00</label>
+                    <input type="number" id="cobbSalad" name="quantity" min="1" max="5" value="0">
+                    <br>
+
+                    <label id="ceasarSaladLabel">Caesar Salad ..................................................... $5.00</label>
+                    <input type="number" id="caesarSalad" name="quantity" min="1" max="5" value="0">
+                    <br>
+
+                    <label id="chefSaladLabel">Chef Salad ......................................................... $5.00</label>
+                    <input type="number" id="chefSalad" name="quantity" min="1" max="5" value="0">
+                    <br>
+                    <br>
+
+                    <h3>Drinks</h3>
+
+                    <label id="spriteLabel">Sprite .................................................................... $1.75</label>
+                    <input type="number" id="sprite" name="quantity" min="1" max="5" value="0">
+                    <br>
+
+                    <label id="cokeLabel">Coca Cola ............................................................. $1.75 </label>
+                    <input type="number" id="coke" name="quantity" min="1" max="5" value="0">
+                    <br>
+
+                    <label id="teaLabel">Tea ......................................................................... $1.25</label>
+                    <input type="number" id="tea" name="quantity" min="1" max="5" value="0">
+                    <br>
+
+                    <label id="coffeelabel">Coffee ................................................................... $1.50 </label>
+                    <input type="number" id="coffee" name="quantity" min="1" max="5" value="0">
+
+                    <br>
+
+                    <br>
+
+                    <h3>Sides</h3>
+
+                    <label id="friesLabel">Fries ..................................................................... $4.00</label>
+                    <input type="number" id="fries" name="quantity" min="1" max="5" value="0">
+                    <br>
+
+                    <label id="chipsLabel">Chips ................................................................... $3.00</label>
+                    <input type="number" id="chips" name="quantity" min="1" max="5" value="0">
+                    <br>
+
+                    <label id="potatoWedgesLabel">Potato Wedges .................................................. $5.00</label>
+                    <input type="number" id="potatoWedges" name="quantity" min="1" max="5" value="0">
+                    <br>
+                    <br>
+
+                    <h3>Desserts</h3>
+
+                    <label id="cakeLabel">Chocolate Cake ................................................. $6.00</label>
+                    <input type="number" id="cake" name="quantity" min="1" max="5" value="0">
+                    <br>
+
+                    <label id="donutsLabel">Apple Cinnamon Donuts ................................ $ 5.00</label>
+                    <input type="number" id="donuts" name="quantity" min="1" max="5" value="0">
+                    <br>
+
+                    <label id="cookieLabel">S'mores Cookie .................................................. $3.00</label>
+                    <input type="number" id="cookie" name="quantity" min="1" max="5" value="0">
+                    <br>
+                    <br>
+
+                    <button id="click4Price" onclick="getPrice()">See Price</button>
+                    <br>
+                    <br>
+                    <h4 id = 'price'> Price </h4>
+
+                    <br>
+                    <label for="pickupDate">Pick up date:</label>
+                    <input type="date" id="pickupDate" name="pickupDate">
+
+                    <br>
+
+                    <label for="appt-time">Choose an appointment time: </label>
+                    <input id="appt-time" type="time" name="appt-time" value="12:30">
+                    <br>
+
+                    <button id="click4Order" onclick="getOrder()">Create order PDF</button>
+                    <br>
+                    <br>
+
+                    <div id="smart-button-container">
+                        <div style="text-align: center;">
+                            <div id="paypal-button-container"></div>
+                        </div>
+                    </div>
+                    <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD" data-sdk-integration-source="button-factory"></script>
+                    <script>
+                        function initPayPalButton() {
+                            paypal.Buttons({
+                                style: {
+                                    shape: 'rect',
+                                    color: 'silver',
+                                    layout: 'vertical',
+                                    label: 'paypal',
+
+                                },
+
+                                createOrder: function(data, actions) {
+                                    return actions.order.create({
+                                        purchase_units: [{"amount":{"currency_code":"USD","value":1}}]
+                                    });
+                                },
+
+                                onApprove: function(data, actions) {
+                                    return actions.order.capture().then(function(details) {
+                                        alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                                    });
+                                },
+
+                                onError: function(err) {
+                                    console.log(err);
+                                }
+                            }).render('#paypal-button-container');
+                        }
+                        initPayPalButton();
+                    </script>
+                    <br>
+                    <br>
+
+                    <button id="pretend" onclick="pretendPayButton()">Pretend I payed</button>
+                    <br>
+                    <br>
+
+                    <button id="submitOrder" onclick="submitOrder()">Submit Order</button>
+
+
+                    <br>
+                    <br>
+                    <p class="address mb-5">
+                        <em>
+                            <strong>1116 Orchard Street</strong>
+                            <br>
+                            Golden Valley, Minnesota
+                        </em>
+                    </p>
+                    <p class="mb-0">
+                        <small>
+                            <em>Call Anytime</em>
+                        </small>
+                        <br>
+                        (317) 585-8468
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer text-faded text-center py-5">
+    <div class="container">
+        <p class="m-0 small">Copyright &copy; Your Website 2018</p>
+    </div>
+</footer>
+
+<!-- Bootstrap core JavaScript -->
+<script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.debug.js"></script>
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="js/firebaseUtils.js"></script>
+<script src="js/order.js"></script>
+
+<script>
+    $('.list-hours li').eq(new Date().getDay()).addClass('today');
+</script>
+
+</body>
+
+</html>
